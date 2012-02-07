@@ -10,6 +10,14 @@
         </Property>
       </Properties>
     </Component>
+    <Component class="javax.swing.JFileChooser" name="textureChooser">
+      <Properties>
+        <Property name="dialogTitle" type="java.lang.String" value="Sound File"/>
+        <Property name="fileFilter" type="javax.swing.filechooser.FileFilter" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="SoundFiles" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -85,7 +93,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="textureBroswe" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField6" pref="184" max="32767" attributes="0"/>
+                              <Component id="texturePath" pref="184" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="soundBrowse" min="-2" max="-2" attributes="0"/>
@@ -131,7 +139,7 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="590" max="32767" attributes="0"/>
-              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+              <Component id="buildIt" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -146,7 +154,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="textureBroswe" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="texturePath" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -223,7 +231,7 @@
                   </Group>
               </Group>
               <EmptySpace pref="192" max="32767" attributes="0"/>
-              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+              <Component id="buildIt" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -784,7 +792,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textureBrosweActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField6">
+    <Component class="javax.swing.JTextField" name="texturePath">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
@@ -804,13 +812,16 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="buildIt">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Lucida Console" size="11" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Build it!"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buildItActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="soundPath">
       <Properties>
