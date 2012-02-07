@@ -20,5 +20,10 @@
       <artifactId>swing-layout</artifactId>
       <version>1.0.3</version>
     </dependency>
+    <dependency>
+      <groupId>org.jdesktop</groupId>
+      <artifactId>swing-worker</artifactId>
+      <version>1.1</version>
+    </dependency>
   </dependencies>
 </project>
