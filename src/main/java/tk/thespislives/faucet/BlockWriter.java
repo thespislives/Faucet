@@ -4,30 +4,35 @@ import java.io.*;
 
 public class BlockWriter {
 
-    public static final String nameOfMod = "MyPlugin";
-    public static final String nameOfBlock = "MyBlock";
-    public static final String blockTexture = "Marble.png";
-    public static final String blockMaterial = "Stone";
-    public static final String nation = "tk";
-    public static final String userName = "thespislives";
-    public static final String packageName = nation + "." + userName + "." + nameOfBlock;
-    public static final String ingredient1 = "boneMeal";
-    public static final String ingredient2 = "boneMeal";
-    public static final String ingredient3 = "boneMeal";
-    public static final String ingredient4 = "boneMeal";
-    public static final String ingredient5 = "cobblestone";
-    public static final String ingredient6 = "boneMeal";
-    public static final String ingredient7 = "boneMeal";
-    public static final String ingredient8 = "boneMeal";
-    public static final String ingredient9 = "boneMeal";
-    public static final String uncraftable = "boneMeal";
-    public static final String soundEffect = "sound.ogg";
-    public static int friction = 0;
-    public static int hardness = 0;
-    public static int lightLevel = 0;
-    public static boolean isOpaque = true;
+    public String nameOfMod;
+    public String nameOfBlock;
+    public String blockTexture;
+    public String blockMaterial;
+    public String nation;
+    public String userName;
+    public String packageName = nation + "." + userName + "." + nameOfBlock;
+    public String ingredient1;
+    public String ingredient2;
+    public String ingredient3;
+    public String ingredient4;
+    public String ingredient5;
+    public String ingredient6;
+    public String ingredient7;
+    public String ingredient8;
+    public String ingredient9;
+    public String uncraftable;
+    public String soundEffect;
+    public int friction;
+    public int hardness;
+    public int lightLevel;
+    public boolean opaque;
+    public boolean grows;
+    public boolean gravity;
+    public boolean entities;
+    public boolean burns;
+    public boolean canBreak;
 
-    public static void main(String args[]) {
+    public void create(){
 
         try {
             // Create file
@@ -128,7 +133,7 @@ public class BlockWriter {
                     + "		newBlock.setHardness(" + hardness + ");"
                     + "		newBlock.setLightLevel(" + lightLevel + ");"
                     + "		newBlock.setName(" + nameOfBlock + ");"
-                    + "		newBlock.setOpaque(" + isOpaque + ");"
+                    + "		newBlock.setOpaque(" + opaque + ");"
                     + "		newBlock.setStepSound(" + soundEffect + ");"
                     + "		Bukkit.getLogger().log(Level.INFO,"
                     + "				\""
