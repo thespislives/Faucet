@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>tk.thespislives</groupId>
-  <artifactId>Faucet</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>faucet</artifactId>
+  <version>dev-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Faucet</name>
