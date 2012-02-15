@@ -74,111 +74,126 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="blockBuildIt" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="blockTextCustomCode" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="blockLabelIngredients" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="blockBox1" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="blockBox2" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="blockBox3" min="-2" pref="108" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="blockBox4" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="blockBox5" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="blockBox6" min="-2" pref="108" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="blockBox7" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="blockBox8" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="blockBox9" min="-2" pref="108" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="blockLabelMaterial" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="blockBoxMaterial" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="blockLabelTrue" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="blockCheckOpaque" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="blockCheckGrows" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="blockCheckGravity" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="blockCheckHarvestable" min="-2" max="-2" attributes="0"/>
+                                      <Component id="blockCheckBurnable" min="-2" max="-2" attributes="0"/>
+                                      <Component id="blockCheckEntities" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="blockBrowseSound" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="blockPathSound" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="blockBrowseTexture" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="blockPathTexture" min="-2" pref="212" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="blockLabelSound" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="blockLabelTexture" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="blockLabelBlockName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="blockLabelAuthor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="blockLabelNation" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="blockLabelValues" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="blockTextNation" max="32767" attributes="0"/>
+                                              <Component id="blockTextBlockName" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="blockTextAuthor" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="blockLabelHardness" min="-2" max="-2" attributes="0"/>
+                                          <Component id="blockLabelLightLevel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="blockLabelFriction" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="blockTextLightLevel" max="32767" attributes="0"/>
+                                          <Component id="blockTextFriction" max="32767" attributes="0"/>
+                                          <Component id="blockTextHardness" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
+                              <Component id="blockBuildIt" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="blockLabelIngredients" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="blockBox1" min="-2" pref="108" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="blockBox2" min="-2" pref="108" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="blockBox3" min="-2" pref="108" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="blockBox4" min="-2" pref="108" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="blockBox5" min="-2" pref="108" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="blockBox6" min="-2" pref="108" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="blockBox7" min="-2" pref="108" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="blockBox8" min="-2" pref="108" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="blockBox9" min="-2" pref="108" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="blockLabelMaterial" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="blockBoxMaterial" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="blockLabelTrue" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="blockCheckOpaque" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="blockCheckGrows" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="blockCheckGravity" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="blockCheckHarvestable" min="-2" max="-2" attributes="0"/>
-                                  <Component id="blockCheckBurnable" min="-2" max="-2" attributes="0"/>
-                                  <Component id="blockCheckEntities" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="blockBrowseSound" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="blockPathSound" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="blockBrowseTexture" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="blockPathTexture" min="-2" pref="212" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="blockLabelSound" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="blockLabelTexture" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="blockLabelBlockName" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="blockLabelAuthor" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="blockLabelNation" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="blockLabelValues" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="blockTextNation" max="32767" attributes="0"/>
-                                      <Component id="blockTextBlockName" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="blockTextAuthor" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="blockLabelHardness" min="-2" max="-2" attributes="0"/>
-                                  <Component id="blockLabelLightLevel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="blockLabelFriction" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="blockTextLightLevel" max="32767" attributes="0"/>
-                                  <Component id="blockTextFriction" max="32767" attributes="0"/>
-                                  <Component id="blockTextHardness" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="blockLabelCustomCode" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -275,8 +290,13 @@
                                   <Component id="blockCheckEntities" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="blockCheckGravity" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                              <Component id="blockBuildIt" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="blockLabelCustomCode" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="blockBuildIt" min="-2" max="-2" attributes="0"/>
+                                  <Component id="blockTextCustomCode" min="-2" pref="94" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -3498,6 +3518,13 @@
                 <Property name="text" type="java.lang.String" value="Nation:"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JTextField" name="blockTextCustomCode">
+            </Component>
+            <Component class="javax.swing.JLabel" name="blockLabelCustomCode">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Custom Code"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="itemPanel">
@@ -3512,12 +3539,16 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="blockTextCustomCode1" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="itemLabelIngredient" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="itemLabelIngredients" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="itemBox1" min="-2" pref="108" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -3540,21 +3571,51 @@
                                       <Component id="itemBox9" min="-2" pref="108" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="itemTextureBrowse" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="itemLabelTexture" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="itemLabelName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemTextBlockName" min="-2" pref="176" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="blockBrowseSound1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="blockPathSound1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="blockBrowseTexture1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="blockPathTexture1" min="-2" pref="212" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="blockLabelSound1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="blockLabelTexture1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="itemLabelItemName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="itemLabelAuthor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="itemLabelNation" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="itemTextNation" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemTextItemName" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemTextAuthor" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
+                              <Component id="blockBuildIt1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="itemPathTexture" min="-2" pref="212" max="-2" attributes="0"/>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                      <Component id="blockLabelCustomCode1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3564,15 +3625,15 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="itemLabelTexture" min="-2" max="-2" attributes="0"/>
+                              <Component id="blockLabelTexture1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="itemTextureBrowse" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="itemPathTexture" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="blockBrowseTexture1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="blockPathTexture1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="itemLabelIngredient" min="-2" max="-2" attributes="0"/>
+                              <Component id="itemLabelIngredients" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="itemBox1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3582,29 +3643,58 @@
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="itemBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="itemBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="itemBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="blockLabelSound1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="blockBrowseSound1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="blockPathSound1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="itemBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="itemBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="itemBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="itemBox7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="itemBox8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="itemBox9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="itemBox7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="itemBox8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="itemBox9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="itemLabelItemName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="itemTextItemName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="itemLabelName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="itemTextBlockName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="itemLabelAuthor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="itemTextAuthor" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="325" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="itemLabelNation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="itemTextNation" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="141" max="32767" attributes="0"/>
+                      <Component id="blockLabelCustomCode1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="blockBuildIt1" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="blockTextCustomCode1" alignment="1" min="-2" pref="94" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="21" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="itemLabelIngredient">
+            <Component class="javax.swing.JLabel" name="itemLabelIngredients">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Lucida Console" size="14" style="1"/>
@@ -6537,31 +6627,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemBox9ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="itemLabelTexture">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Console" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Texture"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="itemTextureBrowse">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Console" size="11" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Browse:"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemTextureBrowseActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="itemPathTexture">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="itemLabelName">
+            <Component class="javax.swing.JLabel" name="itemLabelItemName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Lucida Console" size="14" style="1"/>
@@ -6569,15 +6635,95 @@
                 <Property name="text" type="java.lang.String" value="Item Name:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="itemTextBlockName">
+            <Component class="javax.swing.JTextField" name="itemTextItemName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Lucida Console" size="12" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemTextBlockNameActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemTextItemNameActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="blockLabelTexture1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Console" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Texture"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="blockBrowseTexture1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Console" size="11" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Browse:"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="blockBrowseTexture1ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="blockPathTexture1">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="blockLabelSound1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Console" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Sound"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="blockBrowseSound1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Console" size="11" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Browse:"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="blockBrowseSound1ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="blockPathSound1">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="blockBuildIt1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Console" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Build it!"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="blockBuildIt1ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="itemTextAuthor">
+            </Component>
+            <Component class="javax.swing.JTextField" name="itemTextNation">
+            </Component>
+            <Component class="javax.swing.JLabel" name="itemLabelAuthor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Author:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="itemLabelNation">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nation:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="blockTextCustomCode1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="blockLabelCustomCode1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Custom Code"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

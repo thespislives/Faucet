@@ -65,8 +65,10 @@ public class FaucetGUI extends javax.swing.JFrame {
         blockTextNation = new javax.swing.JTextField();
         blockLabelAuthor = new javax.swing.JLabel();
         blockLabelNation = new javax.swing.JLabel();
+        blockTextCustomCode = new javax.swing.JTextField();
+        blockLabelCustomCode = new javax.swing.JLabel();
         itemPanel = new javax.swing.JPanel();
-        itemLabelIngredient = new javax.swing.JLabel();
+        itemLabelIngredients = new javax.swing.JLabel();
         itemBox1 = new javax.swing.JComboBox();
         itemBox2 = new javax.swing.JComboBox();
         itemBox3 = new javax.swing.JComboBox();
@@ -76,11 +78,21 @@ public class FaucetGUI extends javax.swing.JFrame {
         itemBox7 = new javax.swing.JComboBox();
         itemBox8 = new javax.swing.JComboBox();
         itemBox9 = new javax.swing.JComboBox();
-        itemLabelTexture = new javax.swing.JLabel();
-        itemTextureBrowse = new javax.swing.JButton();
-        itemPathTexture = new javax.swing.JTextField();
-        itemLabelName = new javax.swing.JLabel();
-        itemTextBlockName = new javax.swing.JTextField();
+        itemLabelItemName = new javax.swing.JLabel();
+        itemTextItemName = new javax.swing.JTextField();
+        blockLabelTexture1 = new javax.swing.JLabel();
+        blockBrowseTexture1 = new javax.swing.JButton();
+        blockPathTexture1 = new javax.swing.JTextField();
+        blockLabelSound1 = new javax.swing.JLabel();
+        blockBrowseSound1 = new javax.swing.JButton();
+        blockPathSound1 = new javax.swing.JTextField();
+        blockBuildIt1 = new javax.swing.JButton();
+        itemTextAuthor = new javax.swing.JTextField();
+        itemTextNation = new javax.swing.JTextField();
+        itemLabelAuthor = new javax.swing.JLabel();
+        itemLabelNation = new javax.swing.JLabel();
+        blockTextCustomCode1 = new javax.swing.JTextField();
+        blockLabelCustomCode1 = new javax.swing.JLabel();
 
         soundChooser.setDialogTitle("Sound File");
         soundChooser.setFileFilter(SoundFiles);
@@ -312,92 +324,104 @@ public class FaucetGUI extends javax.swing.JFrame {
 
         blockLabelNation.setText("Nation:");
 
+        blockLabelCustomCode.setText("Custom Code");
+
         org.jdesktop.layout.GroupLayout blockPanelLayout = new org.jdesktop.layout.GroupLayout(blockPanel);
         blockPanel.setLayout(blockPanelLayout);
         blockPanelLayout.setHorizontalGroup(
             blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, blockPanelLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(blockBuildIt)
-                .add(24, 24, 24))
             .add(blockPanelLayout.createSequentialGroup()
-                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .add(6, 6, 6)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(blockLabelIngredients)
-                            .add(blockPanelLayout.createSequentialGroup()
-                                .add(blockBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(blockBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(blockBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(blockPanelLayout.createSequentialGroup()
-                                .add(blockBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(blockBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(blockBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(blockPanelLayout.createSequentialGroup()
-                                .add(blockBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(blockBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(blockBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                     .add(blockPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(blockLabelMaterial)
-                            .add(blockBoxMaterial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(blockLabelTrue))
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(blockCheckOpaque)
-                            .add(blockCheckGrows)
-                            .add(blockCheckGravity))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(blockCheckHarvestable)
-                            .add(blockCheckBurnable)
-                            .add(blockCheckEntities))))
-                .add(21, 21, 21)
-                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                        .add(blockTextCustomCode))
+                    .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(blockPanelLayout.createSequentialGroup()
-                            .add(blockBrowseSound)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(blockPathSound))
-                        .add(blockPanelLayout.createSequentialGroup()
-                            .add(blockBrowseTexture)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(blockPathTexture, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(blockLabelSound)
-                        .add(blockLabelTexture)
-                        .add(blockPanelLayout.createSequentialGroup()
+                            .add(6, 6, 6)
                             .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(blockLabelBlockName)
-                                .add(blockLabelAuthor)
-                                .add(blockLabelNation)
-                                .add(blockLabelValues))
+                                .add(blockLabelIngredients)
+                                .add(blockPanelLayout.createSequentialGroup()
+                                    .add(blockBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(blockPanelLayout.createSequentialGroup()
+                                    .add(blockBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(blockPanelLayout.createSequentialGroup()
+                                    .add(blockBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                        .add(blockPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                .add(blockLabelMaterial)
+                                .add(blockBoxMaterial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(blockPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .add(blockLabelTrue))
+                        .add(blockPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                .add(blockCheckOpaque)
+                                .add(blockCheckGrows)
+                                .add(blockCheckGravity))
                             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                             .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(blockTextNation)
-                                .add(blockTextBlockName)
-                                .add(blockTextAuthor))))
+                                .add(blockCheckHarvestable)
+                                .add(blockCheckBurnable)
+                                .add(blockCheckEntities)))))
+                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(blockPanelLayout.createSequentialGroup()
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(blockLabelHardness)
-                            .add(blockLabelLightLevel)
-                            .add(blockLabelFriction))
-                        .add(42, 42, 42)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                            .add(blockTextLightLevel)
-                            .add(blockTextFriction)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, blockTextHardness, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 34, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .add(21, 21, 21)
+                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                .add(blockPanelLayout.createSequentialGroup()
+                                    .add(blockBrowseSound)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockPathSound))
+                                .add(blockPanelLayout.createSequentialGroup()
+                                    .add(blockBrowseTexture)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockPathTexture, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(blockLabelSound)
+                                .add(blockLabelTexture)
+                                .add(blockPanelLayout.createSequentialGroup()
+                                    .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(blockLabelBlockName)
+                                        .add(blockLabelAuthor)
+                                        .add(blockLabelNation)
+                                        .add(blockLabelValues))
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(blockTextNation)
+                                        .add(blockTextBlockName)
+                                        .add(blockTextAuthor))))
+                            .add(blockPanelLayout.createSequentialGroup()
+                                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                    .add(blockLabelHardness)
+                                    .add(blockLabelLightLevel)
+                                    .add(blockLabelFriction))
+                                .add(42, 42, 42)
+                                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                    .add(blockTextLightLevel)
+                                    .add(blockTextFriction)
+                                    .add(org.jdesktop.layout.GroupLayout.LEADING, blockTextHardness, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 34, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap())
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, blockPanelLayout.createSequentialGroup()
+                        .add(232, 232, 232)
+                        .add(blockBuildIt)
+                        .add(24, 24, 24))))
+            .add(blockPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(blockLabelCustomCode)
+                .addContainerGap())
         );
         blockPanelLayout.setVerticalGroup(
             blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -471,8 +495,12 @@ public class FaucetGUI extends javax.swing.JFrame {
                         .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(blockCheckEntities)
                             .add(blockCheckGravity))
-                        .add(106, 106, 106)
-                        .add(blockBuildIt))
+                        .add(19, 19, 19)
+                        .add(blockLabelCustomCode)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(blockBuildIt)
+                            .add(blockTextCustomCode, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                     .add(blockPanelLayout.createSequentialGroup()
                         .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(blockLabelFriction)
@@ -490,8 +518,8 @@ public class FaucetGUI extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Blocks", blockPanel);
 
-        itemLabelIngredient.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        itemLabelIngredient.setText("Ingredients:");
+        itemLabelIngredients.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        itemLabelIngredients.setText("Ingredients:");
 
         itemBox1.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
         itemBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
@@ -583,39 +611,69 @@ public class FaucetGUI extends javax.swing.JFrame {
             }
         });
 
-        itemLabelTexture.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        itemLabelTexture.setText("Texture");
+        itemLabelItemName.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        itemLabelItemName.setText("Item Name:");
 
-        itemTextureBrowse.setFont(new java.awt.Font("Lucida Console", 0, 11)); // NOI18N
-        itemTextureBrowse.setText("Browse:");
-        itemTextureBrowse.addActionListener(new java.awt.event.ActionListener() {
+        itemTextItemName.setFont(new java.awt.Font("Lucida Console", 0, 12)); // NOI18N
+        itemTextItemName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemTextureBrowseActionPerformed(evt);
+                itemTextItemNameActionPerformed(evt);
             }
         });
 
-        itemPathTexture.setEditable(false);
+        blockLabelTexture1.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        blockLabelTexture1.setText("Texture");
 
-        itemLabelName.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        itemLabelName.setText("Item Name:");
-
-        itemTextBlockName.setFont(new java.awt.Font("Lucida Console", 0, 12)); // NOI18N
-        itemTextBlockName.addActionListener(new java.awt.event.ActionListener() {
+        blockBrowseTexture1.setFont(new java.awt.Font("Lucida Console", 0, 11)); // NOI18N
+        blockBrowseTexture1.setText("Browse:");
+        blockBrowseTexture1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemTextBlockNameActionPerformed(evt);
+                blockBrowseTexture1ActionPerformed(evt);
             }
         });
+
+        blockPathTexture1.setEditable(false);
+
+        blockLabelSound1.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        blockLabelSound1.setText("Sound");
+
+        blockBrowseSound1.setFont(new java.awt.Font("Lucida Console", 0, 11)); // NOI18N
+        blockBrowseSound1.setText("Browse:");
+        blockBrowseSound1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blockBrowseSound1ActionPerformed(evt);
+            }
+        });
+
+        blockPathSound1.setEditable(false);
+
+        blockBuildIt1.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBuildIt1.setText("Build it!");
+        blockBuildIt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blockBuildIt1ActionPerformed(evt);
+            }
+        });
+
+        itemLabelAuthor.setText("Author:");
+
+        itemLabelNation.setText("Nation:");
+
+        blockLabelCustomCode1.setText("Custom Code");
 
         org.jdesktop.layout.GroupLayout itemPanelLayout = new org.jdesktop.layout.GroupLayout(itemPanel);
         itemPanel.setLayout(itemPanelLayout);
         itemPanelLayout.setHorizontalGroup(
             itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(itemPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                     .add(itemPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(blockTextCustomCode1))
+                    .add(itemPanelLayout.createSequentialGroup()
+                        .add(6, 6, 6)
                         .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(itemLabelIngredient)
+                            .add(itemLabelIngredients)
                             .add(itemPanelLayout.createSequentialGroup()
                                 .add(itemBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -633,18 +691,40 @@ public class FaucetGUI extends javax.swing.JFrame {
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(itemBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(itemBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                .add(itemBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(itemPanelLayout.createSequentialGroup()
                         .add(21, 21, 21)
                         .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(itemTextureBrowse)
-                            .add(itemLabelTexture)))
-                    .add(itemPanelLayout.createSequentialGroup()
-                        .add(itemLabelName)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(itemTextBlockName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 176, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(itemPathTexture, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                            .add(itemPanelLayout.createSequentialGroup()
+                                .add(blockBrowseSound1)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(blockPathSound1))
+                            .add(itemPanelLayout.createSequentialGroup()
+                                .add(blockBrowseTexture1)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(blockPathTexture1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(blockLabelSound1)
+                            .add(blockLabelTexture1)
+                            .add(itemPanelLayout.createSequentialGroup()
+                                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(itemLabelItemName)
+                                    .add(itemLabelAuthor)
+                                    .add(itemLabelNation))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(itemTextNation)
+                                    .add(itemTextItemName)
+                                    .add(itemTextAuthor))))
+                        .addContainerGap())
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, itemPanelLayout.createSequentialGroup()
+                        .add(232, 232, 232)
+                        .add(blockBuildIt1)
+                        .add(24, 24, 24))))
+            .add(itemPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(blockLabelCustomCode1)
+                .addContainerGap())
         );
         itemPanelLayout.setVerticalGroup(
             itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -652,33 +732,55 @@ public class FaucetGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(itemPanelLayout.createSequentialGroup()
-                        .add(itemLabelTexture)
+                        .add(blockLabelTexture1)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(itemTextureBrowse)
-                            .add(itemPathTexture, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                            .add(blockBrowseTexture1)
+                            .add(blockPathTexture1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                     .add(itemPanelLayout.createSequentialGroup()
-                        .add(itemLabelIngredient)
+                        .add(itemLabelIngredients)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(itemBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(itemBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(itemBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(itemPanelLayout.createSequentialGroup()
+                        .add(blockLabelSound1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(blockBrowseSound1)
+                            .add(blockPathSound1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(itemPanelLayout.createSequentialGroup()
+                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(itemBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(itemBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(itemBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(itemBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(itemBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(itemBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                .add(11, 11, 11)
                 .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(itemBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(itemBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(itemBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                    .add(itemLabelItemName)
+                    .add(itemTextItemName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(itemBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(itemBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(itemBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(32, 32, 32)
+                    .add(itemLabelAuthor)
+                    .add(itemTextAuthor, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(itemLabelName)
-                    .add(itemTextBlockName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(325, Short.MAX_VALUE))
+                    .add(itemLabelNation)
+                    .add(itemTextNation, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(0, 141, Short.MAX_VALUE)
+                .add(blockLabelCustomCode1)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(blockBuildIt1)
+                    .add(blockTextCustomCode1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Items", itemPanel);
@@ -702,17 +804,13 @@ public class FaucetGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void blockBrowseTextureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBrowseTextureActionPerformed
-        int returnVal = textureChooser.showOpenDialog(this);
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file = textureChooser.getSelectedFile();
-            // What to do with the file, e.g. display it in a TextArea
-            blockPathTexture.setText(file.getAbsolutePath());
-            textureChooser.getSelectedFile().renameTo(new File(blockWriter.nameOfMod, "texture.png"));
-        } else {
-            System.out.println("File access cancelled by user.");
-        }
-    }//GEN-LAST:event_blockBrowseTextureActionPerformed
+    private void blockBuildItActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBuildItActionPerformed
+        blockWriter.create();
+    }//GEN-LAST:event_blockBuildItActionPerformed
+
+    private void blockBoxMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBoxMaterialActionPerformed
+        blockWriter.blockMaterial = blockBoxMaterial.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBoxMaterialActionPerformed
 
     private void blockBrowseSoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBrowseSoundActionPerformed
         int returnVal = soundChooser.showOpenDialog(this);
@@ -726,121 +824,133 @@ public class FaucetGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_blockBrowseSoundActionPerformed
 
-private void blockBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox2ActionPerformed
-    blockWriter.ingredient2 = blockBox2.getSelectedItem().toString();
-}//GEN-LAST:event_blockBox2ActionPerformed
-
-    private void blockBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox1ActionPerformed
-        blockWriter.ingredient1 = blockBox1.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox1ActionPerformed
-
-    private void blockBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox3ActionPerformed
-        blockWriter.ingredient3 = blockBox3.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox3ActionPerformed
-
-    private void blockBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox4ActionPerformed
-        blockWriter.ingredient4 = blockBox4.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox4ActionPerformed
-
-    private void blockBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox5ActionPerformed
-        blockWriter.ingredient5 = blockBox5.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox5ActionPerformed
-
-    private void blockBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox6ActionPerformed
-        blockWriter.ingredient6 = blockBox6.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox6ActionPerformed
-
-    private void blockBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox7ActionPerformed
-        blockWriter.ingredient7 = blockBox7.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox7ActionPerformed
-
-    private void blockBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox8ActionPerformed
-        blockWriter.ingredient8 = blockBox8.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox8ActionPerformed
-
-    private void blockBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox9ActionPerformed
-        blockWriter.ingredient9 = blockBox9.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox9ActionPerformed
-
-    private void blockTextBlockNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockTextBlockNameActionPerformed
-        blockWriter.nameOfBlock = blockTextBlockName.getText();
-    }//GEN-LAST:event_blockTextBlockNameActionPerformed
-
-    private void blockBoxMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBoxMaterialActionPerformed
-        blockWriter.blockMaterial = blockBoxMaterial.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBoxMaterialActionPerformed
-
-    private void blockCheckOpaqueStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckOpaqueStateChanged
-        blockWriter.opaque = blockCheckOpaque.isSelected();
-    }//GEN-LAST:event_blockCheckOpaqueStateChanged
-
-    private void blockCheckGrowsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckGrowsStateChanged
-        blockWriter.grows = blockCheckGrows.isSelected();
-    }//GEN-LAST:event_blockCheckGrowsStateChanged
-
-    private void blockCheckGravityStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckGravityStateChanged
-        blockWriter.gravity = blockCheckGravity.isSelected();
-    }//GEN-LAST:event_blockCheckGravityStateChanged
-
-    private void blockCheckBurnableStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckBurnableStateChanged
-        blockWriter.burns = blockCheckBurnable.isSelected();
-    }//GEN-LAST:event_blockCheckBurnableStateChanged
-
-    private void blockCheckHarvestableStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckHarvestableStateChanged
-        blockWriter.canBreak = blockCheckHarvestable.isSelected();
-    }//GEN-LAST:event_blockCheckHarvestableStateChanged
+    private void blockBrowseTextureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBrowseTextureActionPerformed
+        int returnVal = textureChooser.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = textureChooser.getSelectedFile();
+            // What to do with the file, e.g. display it in a TextArea
+            blockPathTexture.setText(file.getAbsolutePath());
+            textureChooser.getSelectedFile().renameTo(new File(blockWriter.nameOfMod, "texture.png"));
+        } else {
+            System.out.println("File access cancelled by user.");
+        }
+    }//GEN-LAST:event_blockBrowseTextureActionPerformed
 
     private void blockCheckEntitiesStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckEntitiesStateChanged
         blockWriter.entities = blockCheckEntities.isSelected();
     }//GEN-LAST:event_blockCheckEntitiesStateChanged
 
-    private void blockBuildItActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBuildItActionPerformed
-        blockWriter.create();
-    }//GEN-LAST:event_blockBuildItActionPerformed
+    private void blockCheckGravityStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckGravityStateChanged
+        blockWriter.gravity = blockCheckGravity.isSelected();
+    }//GEN-LAST:event_blockCheckGravityStateChanged
 
-    private void itemBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox1ActionPerformed
-        itemWriter.ingredient1 = itemBox1.getSelectedItem().toString();
-    }//GEN-LAST:event_itemBox1ActionPerformed
+    private void blockCheckHarvestableStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckHarvestableStateChanged
+        blockWriter.canBreak = blockCheckHarvestable.isSelected();
+    }//GEN-LAST:event_blockCheckHarvestableStateChanged
 
-    private void itemBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox2ActionPerformed
-        itemWriter.ingredient2 = itemBox2.getSelectedItem().toString();
-    }//GEN-LAST:event_itemBox2ActionPerformed
+    private void blockCheckGrowsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckGrowsStateChanged
+        blockWriter.grows = blockCheckGrows.isSelected();
+    }//GEN-LAST:event_blockCheckGrowsStateChanged
 
-    private void itemBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox3ActionPerformed
-        itemWriter.ingredient2 = itemBox2.getSelectedItem().toString();
-    }//GEN-LAST:event_itemBox3ActionPerformed
+    private void blockCheckBurnableStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckBurnableStateChanged
+        blockWriter.burns = blockCheckBurnable.isSelected();
+    }//GEN-LAST:event_blockCheckBurnableStateChanged
 
-    private void itemBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox6ActionPerformed
-        itemWriter.ingredient6 = itemBox6.getSelectedItem().toString();
-    }//GEN-LAST:event_itemBox6ActionPerformed
+    private void blockCheckOpaqueStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_blockCheckOpaqueStateChanged
+        blockWriter.opaque = blockCheckOpaque.isSelected();
+    }//GEN-LAST:event_blockCheckOpaqueStateChanged
+
+    private void blockTextBlockNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockTextBlockNameActionPerformed
+        blockWriter.nameOfBlock = blockTextBlockName.getText();
+    }//GEN-LAST:event_blockTextBlockNameActionPerformed
+
+    private void blockBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox9ActionPerformed
+        blockWriter.ingredient9 = blockBox9.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox9ActionPerformed
+
+    private void blockBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox8ActionPerformed
+        blockWriter.ingredient8 = blockBox8.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox8ActionPerformed
+
+    private void blockBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox7ActionPerformed
+        blockWriter.ingredient7 = blockBox7.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox7ActionPerformed
+
+    private void blockBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox6ActionPerformed
+        blockWriter.ingredient6 = blockBox6.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox6ActionPerformed
+
+    private void blockBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox5ActionPerformed
+        blockWriter.ingredient5 = blockBox5.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox5ActionPerformed
+
+    private void blockBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox4ActionPerformed
+        blockWriter.ingredient4 = blockBox4.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox4ActionPerformed
+
+    private void blockBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox3ActionPerformed
+        blockWriter.ingredient3 = blockBox3.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox3ActionPerformed
+
+    private void blockBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox2ActionPerformed
+        blockWriter.ingredient2 = blockBox2.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox2ActionPerformed
+
+    private void blockBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox1ActionPerformed
+        blockWriter.ingredient1 = blockBox1.getSelectedItem().toString();
+    }//GEN-LAST:event_blockBox1ActionPerformed
+
+    private void blockBuildIt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBuildIt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBuildIt1ActionPerformed
+
+    private void blockBrowseSound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBrowseSound1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBrowseSound1ActionPerformed
+
+    private void blockBrowseTexture1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBrowseTexture1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBrowseTexture1ActionPerformed
+
+    private void itemTextItemNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemTextItemNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemTextItemNameActionPerformed
 
     private void itemBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox9ActionPerformed
-        itemWriter.ingredient9 = itemBox9.getSelectedItem().toString();
+        // TODO add your handling code here:
     }//GEN-LAST:event_itemBox9ActionPerformed
 
     private void itemBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox8ActionPerformed
-        itemWriter.ingredient8 = itemBox8.getSelectedItem().toString();
+        // TODO add your handling code here:
     }//GEN-LAST:event_itemBox8ActionPerformed
 
+    private void itemBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemBox7ActionPerformed
+
+    private void itemBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemBox6ActionPerformed
+
     private void itemBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox5ActionPerformed
-        itemWriter.ingredient5 = itemBox5.getSelectedItem().toString();
+        // TODO add your handling code here:
     }//GEN-LAST:event_itemBox5ActionPerformed
 
     private void itemBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox4ActionPerformed
-        itemWriter.ingredient4 = itemBox4.getSelectedItem().toString();
+        // TODO add your handling code here:
     }//GEN-LAST:event_itemBox4ActionPerformed
 
-    private void itemBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox7ActionPerformed
-        itemWriter.ingredient7 = itemBox7.getSelectedItem().toString();
-    }//GEN-LAST:event_itemBox7ActionPerformed
-
-    private void itemTextureBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemTextureBrowseActionPerformed
+    private void itemBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_itemTextureBrowseActionPerformed
+    }//GEN-LAST:event_itemBox3ActionPerformed
 
-    private void itemTextBlockNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemTextBlockNameActionPerformed
-        itemWriter.nameOfItem = itemBox1.getSelectedItem().toString();
-    }//GEN-LAST:event_itemTextBlockNameActionPerformed
+    private void itemBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemBox2ActionPerformed
+
+    private void itemBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -896,8 +1006,11 @@ private void blockBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JComboBox blockBox9;
     private javax.swing.JComboBox blockBoxMaterial;
     private javax.swing.JButton blockBrowseSound;
+    private javax.swing.JButton blockBrowseSound1;
     private javax.swing.JButton blockBrowseTexture;
+    private javax.swing.JButton blockBrowseTexture1;
     private javax.swing.JButton blockBuildIt;
+    private javax.swing.JButton blockBuildIt1;
     private javax.swing.JCheckBox blockCheckBurnable;
     private javax.swing.JCheckBox blockCheckEntities;
     private javax.swing.JCheckBox blockCheckGravity;
@@ -906,6 +1019,8 @@ private void blockBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JCheckBox blockCheckOpaque;
     private javax.swing.JLabel blockLabelAuthor;
     private javax.swing.JLabel blockLabelBlockName;
+    private javax.swing.JLabel blockLabelCustomCode;
+    private javax.swing.JLabel blockLabelCustomCode1;
     private javax.swing.JLabel blockLabelFriction;
     private javax.swing.JLabel blockLabelHardness;
     private javax.swing.JLabel blockLabelIngredients;
@@ -913,14 +1028,20 @@ private void blockBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JLabel blockLabelMaterial;
     private javax.swing.JLabel blockLabelNation;
     private javax.swing.JLabel blockLabelSound;
+    private javax.swing.JLabel blockLabelSound1;
     private javax.swing.JLabel blockLabelTexture;
+    private javax.swing.JLabel blockLabelTexture1;
     private javax.swing.JLabel blockLabelTrue;
     private javax.swing.JLabel blockLabelValues;
     private javax.swing.JPanel blockPanel;
     private javax.swing.JTextField blockPathSound;
+    private javax.swing.JTextField blockPathSound1;
     private javax.swing.JTextField blockPathTexture;
+    private javax.swing.JTextField blockPathTexture1;
     private javax.swing.JTextField blockTextAuthor;
     private javax.swing.JTextField blockTextBlockName;
+    private javax.swing.JTextField blockTextCustomCode;
+    private javax.swing.JTextField blockTextCustomCode1;
     private javax.swing.JTextField blockTextFriction;
     private javax.swing.JTextField blockTextHardness;
     private javax.swing.JTextField blockTextLightLevel;
@@ -934,13 +1055,14 @@ private void blockBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JComboBox itemBox7;
     private javax.swing.JComboBox itemBox8;
     private javax.swing.JComboBox itemBox9;
-    private javax.swing.JLabel itemLabelIngredient;
-    private javax.swing.JLabel itemLabelName;
-    private javax.swing.JLabel itemLabelTexture;
+    private javax.swing.JLabel itemLabelAuthor;
+    private javax.swing.JLabel itemLabelIngredients;
+    private javax.swing.JLabel itemLabelItemName;
+    private javax.swing.JLabel itemLabelNation;
     private javax.swing.JPanel itemPanel;
-    private javax.swing.JTextField itemPathTexture;
-    private javax.swing.JTextField itemTextBlockName;
-    private javax.swing.JButton itemTextureBrowse;
+    private javax.swing.JTextField itemTextAuthor;
+    private javax.swing.JTextField itemTextItemName;
+    private javax.swing.JTextField itemTextNation;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JFileChooser soundChooser;
     private javax.swing.JFileChooser textureChooser;
