@@ -4,25 +4,6 @@ import java.io.*;
 
 public class ItemWriter {
 
-    public String nameOfMod;
-    public String nameOfItem;
-    public String itemTexture;
-    public String itemMaterial;
-    public String nation;
-    public String userName;
-    public String packageName = nation + "." + userName + "." + nameOfItem;
-    public String ingredient1;
-    public String ingredient2;
-    public String ingredient3;
-    public String ingredient4;
-    public String ingredient5;
-    public String ingredient6;
-    public String ingredient7;
-    public String ingredient8;
-    public String ingredient9;
-    public String uncraftable;
-
-
 
     public void create() {
 
