@@ -25,18 +25,23 @@ public class FaucetGUI extends javax.swing.JFrame {
         soundChooser = new javax.swing.JFileChooser();
         textureChooser = new javax.swing.JFileChooser();
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        basicPanel = new javax.swing.JPanel();
+        basicTextAuthor = new javax.swing.JTextField();
+        basicTextNation = new javax.swing.JTextField();
+        basicLabelNation = new javax.swing.JLabel();
+        basicLabelAuthor = new javax.swing.JLabel();
+        blockLabelIngredients1 = new javax.swing.JLabel();
+        blockBox10 = new javax.swing.JComboBox();
+        blockBox11 = new javax.swing.JComboBox();
+        blockBox12 = new javax.swing.JComboBox();
+        blockBox13 = new javax.swing.JComboBox();
+        blockBox14 = new javax.swing.JComboBox();
+        blockBox15 = new javax.swing.JComboBox();
+        blockBox16 = new javax.swing.JComboBox();
+        blockBox17 = new javax.swing.JComboBox();
+        blockBox18 = new javax.swing.JComboBox();
         blockPanel = new javax.swing.JPanel();
-        blockLabelIngredients = new javax.swing.JLabel();
-        blockBox1 = new javax.swing.JComboBox();
-        blockBox2 = new javax.swing.JComboBox();
-        blockBox3 = new javax.swing.JComboBox();
-        blockBox4 = new javax.swing.JComboBox();
-        blockBox5 = new javax.swing.JComboBox();
-        blockBox6 = new javax.swing.JComboBox();
-        blockBox7 = new javax.swing.JComboBox();
-        blockBox8 = new javax.swing.JComboBox();
-        blockBox9 = new javax.swing.JComboBox();
-        blockLabelBlockName = new javax.swing.JLabel();
+        blockLabelName = new javax.swing.JLabel();
         blockTextBlockName = new javax.swing.JTextField();
         blockLabelTrue = new javax.swing.JLabel();
         blockCheckOpaque = new javax.swing.JCheckBox();
@@ -61,36 +66,15 @@ public class FaucetGUI extends javax.swing.JFrame {
         blockLabelHardness = new javax.swing.JLabel();
         blockTextHardness = new javax.swing.JTextField();
         blockBuildIt = new javax.swing.JButton();
-        blockTextAuthor = new javax.swing.JTextField();
-        blockTextNation = new javax.swing.JTextField();
-        blockLabelAuthor = new javax.swing.JLabel();
-        blockLabelNation = new javax.swing.JLabel();
         blockTextCustomCode = new javax.swing.JTextField();
         blockLabelCustomCode = new javax.swing.JLabel();
         itemPanel = new javax.swing.JPanel();
-        itemLabelIngredients = new javax.swing.JLabel();
-        itemBox1 = new javax.swing.JComboBox();
-        itemBox2 = new javax.swing.JComboBox();
-        itemBox3 = new javax.swing.JComboBox();
-        itemBox4 = new javax.swing.JComboBox();
-        itemBox5 = new javax.swing.JComboBox();
-        itemBox6 = new javax.swing.JComboBox();
-        itemBox7 = new javax.swing.JComboBox();
-        itemBox8 = new javax.swing.JComboBox();
-        itemBox9 = new javax.swing.JComboBox();
-        itemLabelItemName = new javax.swing.JLabel();
-        itemTextItemName = new javax.swing.JTextField();
-        blockLabelTexture1 = new javax.swing.JLabel();
-        blockBrowseTexture1 = new javax.swing.JButton();
-        blockPathTexture1 = new javax.swing.JTextField();
-        blockLabelSound1 = new javax.swing.JLabel();
-        blockBrowseSound1 = new javax.swing.JButton();
-        blockPathSound1 = new javax.swing.JTextField();
+        itemLabelName = new javax.swing.JLabel();
+        itemTextBlockName = new javax.swing.JTextField();
+        itemLabelTexture = new javax.swing.JLabel();
+        itemBrowseTexture = new javax.swing.JButton();
+        itemPathTexture = new javax.swing.JTextField();
         blockBuildIt1 = new javax.swing.JButton();
-        itemTextAuthor = new javax.swing.JTextField();
-        itemTextNation = new javax.swing.JTextField();
-        itemLabelAuthor = new javax.swing.JLabel();
-        itemLabelNation = new javax.swing.JLabel();
         blockTextCustomCode1 = new javax.swing.JTextField();
         blockLabelCustomCode1 = new javax.swing.JLabel();
 
@@ -103,101 +87,174 @@ public class FaucetGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Faucet");
 
-        blockLabelIngredients.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        blockLabelIngredients.setText("Ingredients:");
+        basicLabelNation.setText("Nation:");
 
-        blockBox1.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox1.setToolTipText("");
-        blockBox1.setName("Ingredient 1"); // NOI18N
-        blockBox1.addActionListener(new java.awt.event.ActionListener() {
+        basicLabelAuthor.setText("Author:");
+
+        blockLabelIngredients1.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        blockLabelIngredients1.setText("Ingredients:");
+
+        blockBox10.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox10.setToolTipText("");
+        blockBox10.setName("Ingredient 1"); // NOI18N
+        blockBox10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox1ActionPerformed(evt);
+                blockBox10ActionPerformed(evt);
             }
         });
 
-        blockBox2.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox2.setToolTipText("");
-        blockBox2.setName("Ingredient 1"); // NOI18N
-        blockBox2.addActionListener(new java.awt.event.ActionListener() {
+        blockBox11.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox11.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox11.setToolTipText("");
+        blockBox11.setName("Ingredient 1"); // NOI18N
+        blockBox11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox2ActionPerformed(evt);
+                blockBox11ActionPerformed(evt);
             }
         });
 
-        blockBox3.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox3.setToolTipText("");
-        blockBox3.setName("Ingredient 1"); // NOI18N
-        blockBox3.addActionListener(new java.awt.event.ActionListener() {
+        blockBox12.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox12.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox12.setToolTipText("");
+        blockBox12.setName("Ingredient 1"); // NOI18N
+        blockBox12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox3ActionPerformed(evt);
+                blockBox12ActionPerformed(evt);
             }
         });
 
-        blockBox4.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox4.setToolTipText("");
-        blockBox4.setName("Ingredient 1"); // NOI18N
-        blockBox4.addActionListener(new java.awt.event.ActionListener() {
+        blockBox13.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox13.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox13.setToolTipText("");
+        blockBox13.setName("Ingredient 1"); // NOI18N
+        blockBox13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox4ActionPerformed(evt);
+                blockBox13ActionPerformed(evt);
             }
         });
 
-        blockBox5.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox5.setToolTipText("");
-        blockBox5.setName("Ingredient 1"); // NOI18N
-        blockBox5.addActionListener(new java.awt.event.ActionListener() {
+        blockBox14.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox14.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox14.setToolTipText("");
+        blockBox14.setName("Ingredient 1"); // NOI18N
+        blockBox14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox5ActionPerformed(evt);
+                blockBox14ActionPerformed(evt);
             }
         });
 
-        blockBox6.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox6.setToolTipText("");
-        blockBox6.setName("Ingredient 1"); // NOI18N
-        blockBox6.addActionListener(new java.awt.event.ActionListener() {
+        blockBox15.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox15.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox15.setToolTipText("");
+        blockBox15.setName("Ingredient 1"); // NOI18N
+        blockBox15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox6ActionPerformed(evt);
+                blockBox15ActionPerformed(evt);
             }
         });
 
-        blockBox7.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox7.setToolTipText("");
-        blockBox7.setName("Ingredient 1"); // NOI18N
-        blockBox7.addActionListener(new java.awt.event.ActionListener() {
+        blockBox16.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox16.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox16.setToolTipText("");
+        blockBox16.setName("Ingredient 1"); // NOI18N
+        blockBox16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox7ActionPerformed(evt);
+                blockBox16ActionPerformed(evt);
             }
         });
 
-        blockBox8.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox8.setToolTipText("");
-        blockBox8.setName("Ingredient 1"); // NOI18N
-        blockBox8.addActionListener(new java.awt.event.ActionListener() {
+        blockBox17.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox17.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox17.setToolTipText("");
+        blockBox17.setName("Ingredient 1"); // NOI18N
+        blockBox17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox8ActionPerformed(evt);
+                blockBox17ActionPerformed(evt);
             }
         });
 
-        blockBox9.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        blockBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        blockBox9.setToolTipText("");
-        blockBox9.setName("Ingredient 1"); // NOI18N
-        blockBox9.addActionListener(new java.awt.event.ActionListener() {
+        blockBox18.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
+        blockBox18.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
+        blockBox18.setToolTipText("");
+        blockBox18.setName("Ingredient 1"); // NOI18N
+        blockBox18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBox9ActionPerformed(evt);
+                blockBox18ActionPerformed(evt);
             }
         });
 
-        blockLabelBlockName.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        blockLabelBlockName.setText("Block Name:");
+        org.jdesktop.layout.GroupLayout basicPanelLayout = new org.jdesktop.layout.GroupLayout(basicPanel);
+        basicPanel.setLayout(basicPanelLayout);
+        basicPanelLayout.setHorizontalGroup(
+            basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(basicPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(basicPanelLayout.createSequentialGroup()
+                        .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(basicLabelAuthor)
+                            .add(basicLabelNation))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(basicTextNation)
+                            .add(basicTextAuthor)))
+                    .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(blockLabelIngredients1)
+                        .add(basicPanelLayout.createSequentialGroup()
+                            .add(blockBox16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(blockBox17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(blockBox18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(basicPanelLayout.createSequentialGroup()
+                            .add(blockBox10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(blockBox11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(blockBox12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(basicPanelLayout.createSequentialGroup()
+                            .add(blockBox15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(blockBox14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(blockBox13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(79, Short.MAX_VALUE))
+        );
+        basicPanelLayout.setVerticalGroup(
+            basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(basicPanelLayout.createSequentialGroup()
+                .add(blockLabelIngredients1)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(blockBox10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(blockBox11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(blockBox12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(blockBox15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(blockBox14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(blockBox13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(blockBox16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(blockBox17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(blockBox18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(31, 31, 31)
+                .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(basicLabelAuthor)
+                    .add(basicTextAuthor, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(basicPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(basicLabelNation)
+                    .add(basicTextNation, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(0, 301, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Basic Info", basicPanel);
+
+        blockLabelName.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        blockLabelName.setText("Block Name:");
 
         blockTextBlockName.setFont(new java.awt.Font("Lucida Console", 0, 12)); // NOI18N
         blockTextBlockName.addActionListener(new java.awt.event.ActionListener() {
@@ -320,10 +377,6 @@ public class FaucetGUI extends javax.swing.JFrame {
             }
         });
 
-        blockLabelAuthor.setText("Author:");
-
-        blockLabelNation.setText("Nation:");
-
         blockLabelCustomCode.setText("Custom Code");
 
         org.jdesktop.layout.GroupLayout blockPanelLayout = new org.jdesktop.layout.GroupLayout(blockPanel);
@@ -331,56 +384,44 @@ public class FaucetGUI extends javax.swing.JFrame {
         blockPanelLayout.setHorizontalGroup(
             blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(blockPanelLayout.createSequentialGroup()
-                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(blockTextCustomCode))
-                    .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(blockPanelLayout.createSequentialGroup()
-                            .add(6, 6, 6)
-                            .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(blockLabelIngredients)
-                                .add(blockPanelLayout.createSequentialGroup()
-                                    .add(blockBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                    .add(blockBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                    .add(blockBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(blockPanelLayout.createSequentialGroup()
-                                    .add(blockBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                    .add(blockBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                    .add(blockBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(blockPanelLayout.createSequentialGroup()
-                                    .add(blockBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                    .add(blockBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                    .add(blockBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                        .add(blockPanelLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                .add(blockLabelMaterial)
-                                .add(blockBoxMaterial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(blockPanelLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .add(blockLabelTrue))
-                        .add(blockPanelLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(blockCheckOpaque)
-                                .add(blockCheckGrows)
-                                .add(blockCheckGravity))
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(blockCheckHarvestable)
-                                .add(blockCheckBurnable)
-                                .add(blockCheckEntities)))))
+                .addContainerGap()
                 .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(blockPanelLayout.createSequentialGroup()
-                        .add(21, 21, 21)
+                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                            .add(blockTextCustomCode)
+                            .add(blockPanelLayout.createSequentialGroup()
+                                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(blockLabelTrue)
+                                    .add(blockPanelLayout.createSequentialGroup()
+                                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(blockCheckOpaque)
+                                            .add(blockCheckGrows)
+                                            .add(blockCheckGravity))
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(blockCheckHarvestable)
+                                            .add(blockCheckBurnable)
+                                            .add(blockCheckEntities))))
+                                .add(18, 18, 18)
+                                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(blockLabelValues)
+                                    .add(blockPanelLayout.createSequentialGroup()
+                                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                            .add(blockLabelHardness)
+                                            .add(blockLabelLightLevel)
+                                            .add(blockLabelFriction))
+                                        .add(42, 42, 42)
+                                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                            .add(blockTextLightLevel)
+                                            .add(blockTextFriction)
+                                            .add(org.jdesktop.layout.GroupLayout.LEADING, blockTextHardness, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 34, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                                .add(4, 4, 4)))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(blockBuildIt)
+                        .add(24, 24, 24))
+                    .add(blockPanelLayout.createSequentialGroup()
                         .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(blockLabelCustomCode)
                             .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                                 .add(blockPanelLayout.createSequentialGroup()
                                     .add(blockBrowseSound)
@@ -393,96 +434,43 @@ public class FaucetGUI extends javax.swing.JFrame {
                                 .add(blockLabelSound)
                                 .add(blockLabelTexture)
                                 .add(blockPanelLayout.createSequentialGroup()
-                                    .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                        .add(blockLabelBlockName)
-                                        .add(blockLabelAuthor)
-                                        .add(blockLabelNation)
-                                        .add(blockLabelValues))
+                                    .add(blockLabelName)
                                     .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                    .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                        .add(blockTextNation)
-                                        .add(blockTextBlockName)
-                                        .add(blockTextAuthor))))
-                            .add(blockPanelLayout.createSequentialGroup()
-                                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                    .add(blockLabelHardness)
-                                    .add(blockLabelLightLevel)
-                                    .add(blockLabelFriction))
-                                .add(42, 42, 42)
-                                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                    .add(blockTextLightLevel)
-                                    .add(blockTextFriction)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, blockTextHardness, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 34, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                                    .add(blockTextBlockName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 209, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap())
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, blockPanelLayout.createSequentialGroup()
-                        .add(232, 232, 232)
-                        .add(blockBuildIt)
-                        .add(24, 24, 24))))
-            .add(blockPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(blockLabelCustomCode)
-                .addContainerGap())
+                    .add(blockPanelLayout.createSequentialGroup()
+                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, blockLabelMaterial)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, blockBoxMaterial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(0, 0, Short.MAX_VALUE))))
         );
         blockPanelLayout.setVerticalGroup(
             blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(blockPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .add(blockLabelTexture)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockBrowseTexture)
-                            .add(blockPathTexture, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .add(blockLabelIngredients)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(blockBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(blockBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                .add(blockLabelTexture)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(blockBrowseTexture)
+                    .add(blockPathTexture, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(blockLabelSound)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(blockBrowseSound)
+                    .add(blockPathSound, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(23, 23, 23)
+                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(blockLabelName)
+                    .add(blockTextBlockName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
+                .add(blockLabelMaterial)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(blockBoxMaterial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(39, 39, 39)
                 .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(blockPanelLayout.createSequentialGroup()
-                        .add(blockLabelSound)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockBrowseSound)
-                            .add(blockPathSound, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(blockBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(blockBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(blockBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(blockBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .add(11, 11, 11)
-                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockLabelBlockName)
-                            .add(blockTextBlockName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockLabelAuthor)
-                            .add(blockTextAuthor, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockLabelNation)
-                            .add(blockTextNation, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(18, 18, 18)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockLabelValues)
-                            .add(blockLabelTrue)))
-                    .add(blockPanelLayout.createSequentialGroup()
-                        .add(blockLabelMaterial)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(blockBoxMaterial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(blockPanelLayout.createSequentialGroup()
+                        .add(blockLabelTrue)
                         .add(0, 6, Short.MAX_VALUE)
                         .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(blockCheckOpaque)
@@ -496,12 +484,9 @@ public class FaucetGUI extends javax.swing.JFrame {
                             .add(blockCheckEntities)
                             .add(blockCheckGravity))
                         .add(19, 19, 19)
-                        .add(blockLabelCustomCode)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(blockBuildIt)
-                            .add(blockTextCustomCode, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(blockLabelCustomCode))
                     .add(blockPanelLayout.createSequentialGroup()
+                        .add(blockLabelValues)
                         .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(blockLabelFriction)
                             .add(blockTextFriction, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -512,140 +497,38 @@ public class FaucetGUI extends javax.swing.JFrame {
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(blockTextHardness, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(blockLabelHardness))))
-                .addContainerGap(21, Short.MAX_VALUE))
+                            .add(blockLabelHardness))
+                        .add(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(blockPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(blockBuildIt)
+                    .add(blockTextCustomCode, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
         );
 
         jTabbedPane1.addTab("Blocks", blockPanel);
 
-        itemLabelIngredients.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        itemLabelIngredients.setText("Ingredients:");
+        itemLabelName.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        itemLabelName.setText("Item Name:");
 
-        itemBox1.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox1.setToolTipText("");
-        itemBox1.setName("Ingredient 1"); // NOI18N
-        itemBox1.addActionListener(new java.awt.event.ActionListener() {
+        itemTextBlockName.setFont(new java.awt.Font("Lucida Console", 0, 12)); // NOI18N
+        itemTextBlockName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox1ActionPerformed(evt);
+                itemTextBlockNameActionPerformed(evt);
             }
         });
 
-        itemBox2.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox2.setToolTipText("");
-        itemBox2.setName("Ingredient 1"); // NOI18N
-        itemBox2.addActionListener(new java.awt.event.ActionListener() {
+        itemLabelTexture.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        itemLabelTexture.setText("Texture");
+
+        itemBrowseTexture.setFont(new java.awt.Font("Lucida Console", 0, 11)); // NOI18N
+        itemBrowseTexture.setText("Browse:");
+        itemBrowseTexture.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox2ActionPerformed(evt);
+                itemBrowseTextureActionPerformed(evt);
             }
         });
 
-        itemBox3.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox3.setToolTipText("");
-        itemBox3.setName("Ingredient 1"); // NOI18N
-        itemBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox3ActionPerformed(evt);
-            }
-        });
-
-        itemBox4.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox4.setToolTipText("");
-        itemBox4.setName("Ingredient 1"); // NOI18N
-        itemBox4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox4ActionPerformed(evt);
-            }
-        });
-
-        itemBox5.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox5.setToolTipText("");
-        itemBox5.setName("Ingredient 1"); // NOI18N
-        itemBox5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox5ActionPerformed(evt);
-            }
-        });
-
-        itemBox6.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox6.setToolTipText("");
-        itemBox6.setName("Ingredient 1"); // NOI18N
-        itemBox6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox6ActionPerformed(evt);
-            }
-        });
-
-        itemBox7.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox7.setToolTipText("");
-        itemBox7.setName("Ingredient 1"); // NOI18N
-        itemBox7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox7ActionPerformed(evt);
-            }
-        });
-
-        itemBox8.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox8.setToolTipText("");
-        itemBox8.setName("Ingredient 1"); // NOI18N
-        itemBox8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox8ActionPerformed(evt);
-            }
-        });
-
-        itemBox9.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
-        itemBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "air", "arrow", "bed", "bedBlock", "bedrock", "birchLeaves", "birchLog", "birchSapling", "blackMusicDisc", "blackWool", "blazePowder", "blazeRod", "blueMusicDisc", "blueWool", "boat", "bone", "boneMeal", "book", "bookshelf", "bow", "bowl", "bread", "brewingStand", "brewingStandBlock", "brick", "brickDoubleSlabs", "brickSlab", "brickStairs", "brokenMusicDisc", "brownMushroom", "brownWool", "bucket", "burningfurnace", "cactus", "cactusGreen", "cake", "cakeBlock", "cauldron", "cauldronBlock", "chainBoots", "chainChestplate", "chainHelmet", "chainLeggings", "charcoal", "chest", "clay", "clayBlock", "clayBrick", "clock", "coal", "coalOre", "cobblestone", "cobblestoneDoubleSlabs", "cobblestoneSlab", "cobblestoneStairs", "cocoaBeans", "compass", "cookedChicken", "cookedFish", "cookedPorkchop", "cookie", "crackedStoneBricks", "craftingTable", "crops", "cyanDye", "cyanMusicDisc", "cyanWool", "dandelion", "dandelionYellow", "deadBush", "deadShrub", "detectorRail", "diamond", "diamondAxe", "diamondBlock", "diamondBoots", "diamondChestplate", "diamondHelmet", "diamondHoe", "diamondLeggings", "diamondOre", "diamondPickaxe", "diamondShovel", "diamondSword", "dirt", "dispenser", "dragonEgg", "egg", "enchantmentTable", "enderPearl", "endPortal", "endPortalFrame", "endStone", "eyeOfEnder", "farmland", "feather", "fence", "fenceGate", "fermentedSpiderEye", "fern", "fire", "fishingRod", "forestGreenMusicDisc", "furnace", "ghastTear", "glass", "glassBottle", "glassPane", "glowingRedstoneOre", "glowstoneBlock", "glowstoneDust", "goldAxe", "goldBlock", "goldBoots", "goldChestplate", "goldenApple", "goldHelmet", "goldHoe", "goldIngot", "goldLeggings", "goldMusicDisc", "goldNugget", "goldOre", "goldPickaxe", "goldShovel", "goldSword", "grass", "gravel", "grayDye", "greenMusicDisc", "greenWool", "greyWool", "gunpowder", "hugeBrownMushroom", "hugeRedMushroom", "ice", "inkSac", "ironAxe", "ironBars", "ironBlock", "ironBoots", "ironChestplate", "ironDoor", "ironDoorBlock", "ironHelmet", "ironHoe", "ironIngot", "ironLeggings", "ironOre", "ironPickaxe", "ironShovel", "ironSword", "jackOLantern", "jukebox", "ladders", "lapisBlock", "lapisLazuli", "lapisOre", "lava", "lavaBucket", "leather", "leatherBoots", "leatherCap", "leatherPants", "leatherTunic", "leaves", "lever", "lightBlueDye", "lightBlueWool", "lightGrayDye", "lightGreyWool", "lilyPad", "limeDye", "limeWool", "lockedChest", "log", "magentaDye", "magentaWool", "magmaCream", "map", "melonSeeds", "melonSlice", "melonStem", "milk", "minecart", "minecartChest", "minecartFurnace", "monsterSpawner", "mossStone", "mossyStoneBricks", "movedByPiston", "mushroomSoup", "mycelium", "netherBrick", "netherBrickFence", "netherBrickStairs", "netherrack", "netherWart", "netherWartBlock", "noteblock", "obsidian", "orangeDye", "orangeMusicDisc", "orangeWool", "paintings", "paper", "pinkDye", "pinkWool", "pistonBase", "pistonExtension", "pistonStickyBase", "portal", "potion", "poweredRail", "pumpkin", "pumpkinSeeds", "pumpkinStem", "purpleDye", "purpleMusicDisc", "purpleWool", "rails", "rawBeef", "rawChicken", "rawFish", "rawPorkchop", "redApple", "redMushroom", "redMusicDisc", "redstone", "redstoneOre", "redstoneRepeater", "redstoneRepeaterOff", "redstoneRepeaterOn", "redstoneTorchOff", "redstoneTorchOn", "redstoneWire", "redWool", "rose", "roseRed", "rottenFlesh", "saddle", "sand", "sandstone", "sandstoneDoubleSlabs", "sandstoneSlab", "sapling", "seeds", "shears", "sign", "signPost", "silverfishStone", "slimeball", "snow", "snowball", "snowBlock", "soulSand", "spiderEye", "sponge", "spruceLeaves", "spruceLog", "spruceSapling", "stationaryLava", "stationaryWater", "steak", "stick", "stone", "stoneAxe", "stoneBrickDoubleSlabs", "stoneBricks", "stoneBrickSlab", "stoneBrickStairs", "stoneButton", "stoneDoubleSlabs", "stoneHoe", "stonePickaxe", "stonePressurePlate", "stoneShovel", "stoneSlab", "stoneSword", "string", "sugar", "sugarCane", "sugarCaneBlock", "tallGrass", "tnt", "torch", "trapdoor", "vines", "wallSign", "water", "waterBucket", "watermelon", "web", "wheat", "whiteMusicDisc", "whiteWool", "wood", "woodenAxe", "woodenDoor", "woodenDoorBlock", "woodenDoubleSlabs", "woodenHoe", "woodenPickaxe", "woodenPressurePlate", "woodenShovel", "woodenSlab", "woodenStairs", "woodenSword", "yellowWool" }));
-        itemBox9.setToolTipText("");
-        itemBox9.setName("Ingredient 1"); // NOI18N
-        itemBox9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemBox9ActionPerformed(evt);
-            }
-        });
-
-        itemLabelItemName.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        itemLabelItemName.setText("Item Name:");
-
-        itemTextItemName.setFont(new java.awt.Font("Lucida Console", 0, 12)); // NOI18N
-        itemTextItemName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemTextItemNameActionPerformed(evt);
-            }
-        });
-
-        blockLabelTexture1.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        blockLabelTexture1.setText("Texture");
-
-        blockBrowseTexture1.setFont(new java.awt.Font("Lucida Console", 0, 11)); // NOI18N
-        blockBrowseTexture1.setText("Browse:");
-        blockBrowseTexture1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBrowseTexture1ActionPerformed(evt);
-            }
-        });
-
-        blockPathTexture1.setEditable(false);
-
-        blockLabelSound1.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        blockLabelSound1.setText("Sound");
-
-        blockBrowseSound1.setFont(new java.awt.Font("Lucida Console", 0, 11)); // NOI18N
-        blockBrowseSound1.setText("Browse:");
-        blockBrowseSound1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blockBrowseSound1ActionPerformed(evt);
-            }
-        });
-
-        blockPathSound1.setEditable(false);
+        itemPathTexture.setEditable(false);
 
         blockBuildIt1.setFont(new java.awt.Font("Lucida Console", 1, 11)); // NOI18N
         blockBuildIt1.setText("Build it!");
@@ -655,10 +538,6 @@ public class FaucetGUI extends javax.swing.JFrame {
             }
         });
 
-        itemLabelAuthor.setText("Author:");
-
-        itemLabelNation.setText("Nation:");
-
         blockLabelCustomCode1.setText("Custom Code");
 
         org.jdesktop.layout.GroupLayout itemPanelLayout = new org.jdesktop.layout.GroupLayout(itemPanel);
@@ -666,121 +545,48 @@ public class FaucetGUI extends javax.swing.JFrame {
         itemPanelLayout.setHorizontalGroup(
             itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(itemPanelLayout.createSequentialGroup()
-                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                    .add(itemPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(blockTextCustomCode1))
-                    .add(itemPanelLayout.createSequentialGroup()
-                        .add(6, 6, 6)
-                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(itemLabelIngredients)
-                            .add(itemPanelLayout.createSequentialGroup()
-                                .add(itemBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(itemBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(itemBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(itemPanelLayout.createSequentialGroup()
-                                .add(itemBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(itemBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(itemBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(itemPanelLayout.createSequentialGroup()
-                                .add(itemBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(itemBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(itemBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap()
                 .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(itemPanelLayout.createSequentialGroup()
-                        .add(21, 21, 21)
-                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(itemPanelLayout.createSequentialGroup()
-                                .add(blockBrowseSound1)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(blockPathSound1))
-                            .add(itemPanelLayout.createSequentialGroup()
-                                .add(blockBrowseTexture1)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(blockPathTexture1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(blockLabelSound1)
-                            .add(blockLabelTexture1)
-                            .add(itemPanelLayout.createSequentialGroup()
-                                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(itemLabelItemName)
-                                    .add(itemLabelAuthor)
-                                    .add(itemLabelNation))
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(itemTextNation)
-                                    .add(itemTextItemName)
-                                    .add(itemTextAuthor))))
-                        .addContainerGap())
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, itemPanelLayout.createSequentialGroup()
-                        .add(232, 232, 232)
+                        .add(blockTextCustomCode1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 336, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(blockBuildIt1)
-                        .add(24, 24, 24))))
-            .add(itemPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(blockLabelCustomCode1)
-                .addContainerGap())
+                        .add(24, 24, 24))
+                    .add(itemPanelLayout.createSequentialGroup()
+                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(blockLabelCustomCode1)
+                            .add(itemLabelTexture)
+                            .add(itemPanelLayout.createSequentialGroup()
+                                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(itemBrowseTexture)
+                                    .add(itemPanelLayout.createSequentialGroup()
+                                        .add(6, 6, 6)
+                                        .add(itemLabelName)))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(itemTextBlockName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(itemPathTexture, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap())))
         );
         itemPanelLayout.setVerticalGroup(
             itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(itemPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(itemPanelLayout.createSequentialGroup()
-                        .add(blockLabelTexture1)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockBrowseTexture1)
-                            .add(blockPathTexture1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(itemPanelLayout.createSequentialGroup()
-                        .add(itemLabelIngredients)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(itemBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(itemBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(itemBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(itemPanelLayout.createSequentialGroup()
-                        .add(blockLabelSound1)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(blockBrowseSound1)
-                            .add(blockPathSound1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(itemPanelLayout.createSequentialGroup()
-                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(itemBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(itemBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(itemBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(itemBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(itemBox8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(itemBox9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .add(11, 11, 11)
-                .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(itemLabelItemName)
-                    .add(itemTextItemName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(itemLabelTexture)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(itemLabelAuthor)
-                    .add(itemTextAuthor, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(itemBrowseTexture)
+                    .add(itemPathTexture, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(itemLabelNation)
-                    .add(itemTextNation, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(0, 141, Short.MAX_VALUE)
+                    .add(itemLabelName)
+                    .add(itemTextBlockName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 307, Short.MAX_VALUE)
                 .add(blockLabelCustomCode1)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(itemPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(blockBuildIt1)
-                    .add(blockTextCustomCode1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                    .add(blockTextCustomCode1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
         );
 
         jTabbedPane1.addTab("Items", itemPanel);
@@ -791,8 +597,8 @@ public class FaucetGUI extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jTabbedPane1)
-                .addContainerGap())
+                .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 442, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -864,93 +670,53 @@ public class FaucetGUI extends javax.swing.JFrame {
         blockWriter.nameOfBlock = blockTextBlockName.getText();
     }//GEN-LAST:event_blockTextBlockNameActionPerformed
 
-    private void blockBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox9ActionPerformed
-        blockWriter.ingredient9 = blockBox9.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox9ActionPerformed
+    private void blockBox18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox18ActionPerformed
 
-    private void blockBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox8ActionPerformed
-        blockWriter.ingredient8 = blockBox8.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox8ActionPerformed
+    private void blockBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox17ActionPerformed
 
-    private void blockBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox7ActionPerformed
-        blockWriter.ingredient7 = blockBox7.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox7ActionPerformed
+    private void blockBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox16ActionPerformed
 
-    private void blockBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox6ActionPerformed
-        blockWriter.ingredient6 = blockBox6.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox6ActionPerformed
+    private void blockBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox15ActionPerformed
 
-    private void blockBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox5ActionPerformed
-        blockWriter.ingredient5 = blockBox5.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox5ActionPerformed
+    private void blockBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox14ActionPerformed
 
-    private void blockBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox4ActionPerformed
-        blockWriter.ingredient4 = blockBox4.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox4ActionPerformed
+    private void blockBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox13ActionPerformed
 
-    private void blockBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox3ActionPerformed
-        blockWriter.ingredient3 = blockBox3.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox3ActionPerformed
+    private void blockBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox12ActionPerformed
 
-    private void blockBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox2ActionPerformed
-        blockWriter.ingredient2 = blockBox2.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox2ActionPerformed
+    private void blockBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox11ActionPerformed
 
-    private void blockBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox1ActionPerformed
-        blockWriter.ingredient1 = blockBox1.getSelectedItem().toString();
-    }//GEN-LAST:event_blockBox1ActionPerformed
+    private void blockBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBox10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blockBox10ActionPerformed
+
+    private void itemTextBlockNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemTextBlockNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemTextBlockNameActionPerformed
+
+    private void itemBrowseTextureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBrowseTextureActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemBrowseTextureActionPerformed
 
     private void blockBuildIt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBuildIt1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_blockBuildIt1ActionPerformed
-
-    private void blockBrowseSound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBrowseSound1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_blockBrowseSound1ActionPerformed
-
-    private void blockBrowseTexture1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockBrowseTexture1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_blockBrowseTexture1ActionPerformed
-
-    private void itemTextItemNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemTextItemNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemTextItemNameActionPerformed
-
-    private void itemBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox9ActionPerformed
-
-    private void itemBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox8ActionPerformed
-
-    private void itemBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox7ActionPerformed
-
-    private void itemBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox6ActionPerformed
-
-    private void itemBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox5ActionPerformed
-
-    private void itemBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox4ActionPerformed
-
-    private void itemBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox3ActionPerformed
-
-    private void itemBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox2ActionPerformed
-
-    private void itemBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -995,20 +761,23 @@ public class FaucetGUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox blockBox1;
-    private javax.swing.JComboBox blockBox2;
-    private javax.swing.JComboBox blockBox3;
-    private javax.swing.JComboBox blockBox4;
-    private javax.swing.JComboBox blockBox5;
-    private javax.swing.JComboBox blockBox6;
-    private javax.swing.JComboBox blockBox7;
-    private javax.swing.JComboBox blockBox8;
-    private javax.swing.JComboBox blockBox9;
+    private javax.swing.JLabel basicLabelAuthor;
+    private javax.swing.JLabel basicLabelNation;
+    private javax.swing.JPanel basicPanel;
+    private javax.swing.JTextField basicTextAuthor;
+    private javax.swing.JTextField basicTextNation;
+    private javax.swing.JComboBox blockBox10;
+    private javax.swing.JComboBox blockBox11;
+    private javax.swing.JComboBox blockBox12;
+    private javax.swing.JComboBox blockBox13;
+    private javax.swing.JComboBox blockBox14;
+    private javax.swing.JComboBox blockBox15;
+    private javax.swing.JComboBox blockBox16;
+    private javax.swing.JComboBox blockBox17;
+    private javax.swing.JComboBox blockBox18;
     private javax.swing.JComboBox blockBoxMaterial;
     private javax.swing.JButton blockBrowseSound;
-    private javax.swing.JButton blockBrowseSound1;
     private javax.swing.JButton blockBrowseTexture;
-    private javax.swing.JButton blockBrowseTexture1;
     private javax.swing.JButton blockBuildIt;
     private javax.swing.JButton blockBuildIt1;
     private javax.swing.JCheckBox blockCheckBurnable;
@@ -1017,52 +786,33 @@ public class FaucetGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox blockCheckGrows;
     private javax.swing.JCheckBox blockCheckHarvestable;
     private javax.swing.JCheckBox blockCheckOpaque;
-    private javax.swing.JLabel blockLabelAuthor;
-    private javax.swing.JLabel blockLabelBlockName;
     private javax.swing.JLabel blockLabelCustomCode;
     private javax.swing.JLabel blockLabelCustomCode1;
     private javax.swing.JLabel blockLabelFriction;
     private javax.swing.JLabel blockLabelHardness;
-    private javax.swing.JLabel blockLabelIngredients;
+    private javax.swing.JLabel blockLabelIngredients1;
     private javax.swing.JLabel blockLabelLightLevel;
     private javax.swing.JLabel blockLabelMaterial;
-    private javax.swing.JLabel blockLabelNation;
+    private javax.swing.JLabel blockLabelName;
     private javax.swing.JLabel blockLabelSound;
-    private javax.swing.JLabel blockLabelSound1;
     private javax.swing.JLabel blockLabelTexture;
-    private javax.swing.JLabel blockLabelTexture1;
     private javax.swing.JLabel blockLabelTrue;
     private javax.swing.JLabel blockLabelValues;
     private javax.swing.JPanel blockPanel;
     private javax.swing.JTextField blockPathSound;
-    private javax.swing.JTextField blockPathSound1;
     private javax.swing.JTextField blockPathTexture;
-    private javax.swing.JTextField blockPathTexture1;
-    private javax.swing.JTextField blockTextAuthor;
     private javax.swing.JTextField blockTextBlockName;
     private javax.swing.JTextField blockTextCustomCode;
     private javax.swing.JTextField blockTextCustomCode1;
     private javax.swing.JTextField blockTextFriction;
     private javax.swing.JTextField blockTextHardness;
     private javax.swing.JTextField blockTextLightLevel;
-    private javax.swing.JTextField blockTextNation;
-    private javax.swing.JComboBox itemBox1;
-    private javax.swing.JComboBox itemBox2;
-    private javax.swing.JComboBox itemBox3;
-    private javax.swing.JComboBox itemBox4;
-    private javax.swing.JComboBox itemBox5;
-    private javax.swing.JComboBox itemBox6;
-    private javax.swing.JComboBox itemBox7;
-    private javax.swing.JComboBox itemBox8;
-    private javax.swing.JComboBox itemBox9;
-    private javax.swing.JLabel itemLabelAuthor;
-    private javax.swing.JLabel itemLabelIngredients;
-    private javax.swing.JLabel itemLabelItemName;
-    private javax.swing.JLabel itemLabelNation;
+    private javax.swing.JButton itemBrowseTexture;
+    private javax.swing.JLabel itemLabelName;
+    private javax.swing.JLabel itemLabelTexture;
     private javax.swing.JPanel itemPanel;
-    private javax.swing.JTextField itemTextAuthor;
-    private javax.swing.JTextField itemTextItemName;
-    private javax.swing.JTextField itemTextNation;
+    private javax.swing.JTextField itemPathTexture;
+    private javax.swing.JTextField itemTextBlockName;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JFileChooser soundChooser;
     private javax.swing.JFileChooser textureChooser;
